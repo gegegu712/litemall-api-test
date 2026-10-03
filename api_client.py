@@ -39,3 +39,14 @@ class LitemallClient:
     def order_refund(self, order_id):
         url = BASE_URL + "/wx/order/refund"
         return requests.post(url, headers=self._headers(), json={"orderId": order_id}).json()
+    # ===== 商品接口 =====
+    def goods_list(self, **params):
+        url = BASE_URL + "/wx/goods/list"
+        return requests.get(url, headers=self._headers(), params=params).json()
+
+    def goods_detail(self, goods_id):
+        url = BASE_URL + "/wx/goods/detail"
+        return requests.get(url, headers=self._headers(), params={"id": goods_id}).json()
+    def order_detail(self, order_id):
+        url = BASE_URL + "/wx/order/detail"
+        return requests.get(url, headers=self._headers(), params={"orderId": order_id}).json()

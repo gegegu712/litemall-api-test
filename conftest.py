@@ -23,3 +23,8 @@ def cancelled_order_id(api):
         if "已取消" in order["orderStatusText"]:
             return order["id"]
     pytest.skip("测试数据不足：当前账号没有已取消订单")
+@pytest.fixture(scope="session")
+def goods_id(api):
+    """取一个真实存在的商品 id 作为测试数据"""
+    data = api.goods_list(limit=1)
+    return data["data"]["list"][0]["id"]
