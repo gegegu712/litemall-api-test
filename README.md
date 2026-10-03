@@ -1,5 +1,7 @@
 # litemall 商城（用户端）接口自动化测试
 
+![接口自动化测试](https://github.com/gegegu712/litemall-api-test/actions/workflows/test.yml/badge.svg)
+
 基于开源电商项目 [litemall](https://github.com/linlinjava/litemall) 用户端的接口测试项目：从接口盘点、用例设计到自动化落地与缺陷定位的完整实践。
 
 ## 技术栈
