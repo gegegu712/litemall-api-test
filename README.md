@@ -52,7 +52,7 @@ allure serve allure-results
 推送到 main 分支后，GitHub Actions 自动执行全部用例并归档 Allure 结果。由于云端环境没有真实后端与数据库，CI 中由 `mock_server.py` 提供与真实接口行为一致的模拟服务——包括已知缺陷的响应，用于持续监控 xfail 用例。
 
 ## 测试报告
-
+完整测试报告：[测试报告](docs/测试报告.md)
 ![Allure 报告](docs/allure-report.png)
 
 ## 缺陷发现
